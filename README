@@ -1,3 +1,5 @@
 SVN manage scripts
 
 * upate_remote is a script that allows you to update a remote staging server. For example, if you have your code on 'code.example.com' and your staging server on 'rc.example.com', you can keep up to date rc.example.com with this script.
+
+# comment
