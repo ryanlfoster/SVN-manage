@@ -12,7 +12,11 @@ do
 
    #send the file to the backup server
    scp ${i}_$date.dump $ruser@$rhost:$rdir
-
-   #remove the file to save space on the disk
-   rm ${i}_$date.dump
+   if [ $? -gt 0 ]
+   then
+      echo "Error while sending backup file to remote server"
+   else
+      #remove the file to save space on the 
+      rm ${i}_$date.dump
+   fi
 done
